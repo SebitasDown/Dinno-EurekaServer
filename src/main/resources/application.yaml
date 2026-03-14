@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: dinno-auth-service 
+
+eureka:
+  client:
+    service-url:
+      defaultZone: https://dinno-eurekaserver.onrender.com/eureka/
+    register-with-eureka: true
+    fetch-registry: true
