@@ -1,10 +1,12 @@
-spring:
-  application:
-    name: dinno-auth-service 
+server:
+  port: ${PORT:8761}
 
 eureka:
+  instance:
+    hostname: dinno-eurekaserver-1.onrender.com
+    prefer-ip-address: false
   client:
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
-      defaultZone: https://dinno-eurekaserver.onrender.com/eureka/
-    register-with-eureka: true
-    fetch-registry: true
+      defaultZone: https://dinno-eurekaserver-1.onrender.com/eureka/
